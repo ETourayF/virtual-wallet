@@ -1,6 +1,12 @@
+
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import AccountProvider from "./contexts/Account/account.provider";
+import ModalProvider from "./contexts/Modal/modal.provider";
+import BankProvider from "./contexts/Bank/bank.provider";
+import LedgerProvider from "./contexts/Ledger/ledger.provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +31,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <ModalProvider>
+          <BankProvider>
+            <LedgerProvider>
+              <AccountProvider>
+                {children}
+              </AccountProvider>
+            </LedgerProvider>
+          </BankProvider>
+        </ModalProvider>
       </body>
     </html>
   );

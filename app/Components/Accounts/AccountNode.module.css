@@ -1,0 +1,44 @@
+.mainWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.nodeWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+    border: solid 1px #4b4b4b;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 13px;
+    min-width: 200px;
+
+}
+
+.controls{
+    display: flex;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.balance{
+    padding: 5px;
+    background-color: #e0e0e017;
+    border-radius: 7px;
+    border: solid 1px #4b4b4b;
+}
+
+.physical::before{
+    content: '£'; 
+}
+
+.virtual::before{
+    content: '₿'; 
+
+}

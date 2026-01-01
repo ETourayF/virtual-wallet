@@ -1,0 +1,88 @@
+.modalForm{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.modalTextInputWrapper {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.482);
+    border: 1px solid #353535;
+    font-size: 16px;
+}
+
+.modalTextInputWrapper input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* Hide number input arrows/spinners */
+.modalTextInputWrapper input::-webkit-outer-spin-button,
+.modalTextInputWrapper input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.modalTextInputWrapper input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* selector input */
+.modalSelectorInputWrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.modalSelectorInputWrapper .modalTextInputWrapper {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.dropdownContent{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    top: calc(100% + 5px);
+    background-color: rgba(0, 0, 0, 0.888);
+    border: 1px solid #353535;
+    border-radius: 10px;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1001;
+}
+
+.dropdownItem{
+    display: flex;
+    border: 1px solid #353535;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #3535356a;
+}
+
+.dropdownItem:hover{
+    background-color: #505050a3;
+}
+
+.inputError {
+    border: 1px solid rgb(187, 0, 0);
+    background-color: rgba(255, 0, 0, 0.158);
+}
